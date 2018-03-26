@@ -40,7 +40,7 @@
 #include <sys/stat.h>
 #include <pthread.h>
 
-#ifdef __MACH__
+/*#ifdef __MACH__
 #include <mach/mach_time.h>
 #define CLOCK_REALTIME 0
 #define CLOCK_MONOTONIC 0
@@ -55,9 +55,9 @@ int clock_gettime(int clk_id, struct mach_timespec *t) {
     t->tv_nsec = nseconds;
     return 0;
 }
-#else
+#else*/
 #include <time.h>
-#endif
+//#endif
 
 
 #include <gsl/gsl_matrix.h>
@@ -97,7 +97,7 @@ extern long LOOPNUMBER; // current loop index
 extern AOLOOPCONTROL_CONF *AOconf; // declared in AOloopControl.c
 extern AOloopControl_var aoloopcontrol_var; // declared in AOloopControl.c
 
-long aoconfID_imWFS2_active[100];
+//long aoconfID_imWFS2_active[100];
 
 #define MAX_MBLOCK 20
 

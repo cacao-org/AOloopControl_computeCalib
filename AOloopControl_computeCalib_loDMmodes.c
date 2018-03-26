@@ -38,7 +38,7 @@
 #include <sys/stat.h>
 #include <pthread.h>
 
-#ifdef __MACH__
+/*#ifdef __MACH__
 #include <mach/mach_time.h>
 #define CLOCK_REALTIME 0
 #define CLOCK_MONOTONIC 0
@@ -53,9 +53,9 @@ int clock_gettime(int clk_id, struct mach_timespec *t) {
     t->tv_nsec = nseconds;
     return 0;
 }
-#else
+#else*/
 #include <time.h>
-#endif
+//#endif
 
 
 #include <gsl/gsl_matrix.h>
@@ -65,7 +65,7 @@ int clock_gettime(int clk_id, struct mach_timespec *t) {
 
 
 #include <fitsio.h>
-*/
+//*/
 
 
 #include "CommandLineInterface/CLIcore.h"
